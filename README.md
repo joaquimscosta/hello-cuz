@@ -56,8 +56,6 @@
 
 This project was to create a fun and engaging way to keep my family and friends updated on the events happening each month. By automating the process of generating and sending newsletters, I can ensure that everyone stays in touch.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 * [![Python][Python-shield]][Python-url] - Used to write the code for the Azure Functions.
@@ -67,8 +65,6 @@ This project was to create a fun and engaging way to keep my family and friends 
 * [![SendGrid][SendGrid-shield]][SendGrid-url] - Responsible for the delivery of the generated newsletters via email.
 
 Each of these components plays a crucial role in the functioning of the application, contributing to its ability to automate the process of creating and sending personalized newsletters.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -125,17 +121,11 @@ The Azure Functions Core Tools provide a local development experience for creati
     ```sh
     func start
     ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -143,9 +133,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Joaquim Costa - [LinkedIn](https://linkedin.com/in/joaquimscosta)
 
 Project Link: [https://github.com/joaquimscosta/hello-cuz](https://github.com/joaquimscosta/hello-cuz)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -156,8 +143,6 @@ Project Link: [https://github.com/joaquimscosta/hello-cuz](https://github.com/jo
 * []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -186,5 +171,5 @@ Project Link: [https://github.com/joaquimscosta/hello-cuz](https://github.com/jo
 [SendGrid-shield]: https://img.shields.io/badge/SendGrid-3B5998?style=for-the-badge&logo=sendgrid&logoColor=white
 [SendGrid-url]: https://sendgrid.com/
 
-[DownloadPython-url]: (https://www.python.org/downloads/)
-[AzFuncCoreTools-url]: (https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python)
+[DownloadPython-url]: https://www.python.org/downloads/
+[AzFuncCoreTools-url]: https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python
