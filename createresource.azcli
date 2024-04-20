@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+RESOURCE_GROUP="hellocuz-rg"
+LOCATION="eastus"
+# STORAGE_ACCOUNT_NAME="hellocuzstorage"
+# FUNCTION_APP_NAME="hellocuzfunctionapp"
+
+# az storage account create \
+# --name $STORAGE_ACCOUNT_NAME \
+# --resource-group $RESOURCE_GROUP \ 
+# --location $LOCATION \
+# --sku Standard_LRS
+
+# az functionapp create \
+# --name $FUNCTION_APP_NAME \
+# --resource-group $RESOURCE_GROUP \
+# --consumption-plan-location $LOCATION \
+# --runtime python \
+# --runtime-version 3.10 \
+# --functions-version 4 \
+# --os-type Linux \
+# --storage-account $STORAGE_ACCOUNT_NAME
