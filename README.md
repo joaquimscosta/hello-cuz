@@ -98,7 +98,7 @@ The Azure Functions Core Tools provide a local development experience for creati
 2. Navigate to the project directory
 
    ```sh
-   cd calendar-events
+   cd app
    ```
 
 3. Install python packages
@@ -120,6 +120,29 @@ The Azure Functions Core Tools provide a local development experience for creati
 
     ```sh
     func start
+    ```
+
+## Deploy
+
+To deploy the application, you will need to use the Azure CLI and the Azure Functions Core Tools (func).
+
+1. Login to your Azure account using the Azure CLI:
+
+    ```sh
+    az login
+    ```
+
+2. Navigate to the directory containing your Bicep file and deploy your infrastructure using the az deployment group create command:
+
+    ```sh
+    az deployment group create --resource-group $RESOURCE_GROUP --template-file main.bicep
+    ```
+
+3. Once your infrastructure is deployed, you can publish your function app using the func azure functionapp publish command:
+
+    ```sh
+    cd app
+    func azure functionapp publish <function-app-name> --force
     ```
 
 <!-- LICENSE -->
