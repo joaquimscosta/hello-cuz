@@ -29,9 +29,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/joaquimscosta/hello-cuz">
+<!--   <a href="https://github.com/joaquimscosta/hello-cuz">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">Hello Cuz</h3>
 
@@ -90,18 +90,16 @@ This project was to create a fun and engaging way to keep my family and friends 
 
 ### Built With
 
-[![Python][Python-shield]][Python-url] Used to write the code for the Azure Functions.
-[![Azure Functions][AzureFunctions-shield]][AzureFunctions-url] - Used to host the application logic and trigger the newsletter generation process on a monthly basis.
-[![Google Calendar API][GoogleCalendarAPI-shield]][GoogleCalendarAPI-url] - Utilized to fetch events from the shared family calendar. This data forms the basis of the newsletter content.
-[![OpenAI][OpenAI-shield]][OpenAI-url] - Employs the capabilities of OpenAI's GPT model to generate the email content based on the events fetched from the Google Calendar API.
-[![SendGrid][SendGrid-shield]][SendGrid-url] - Responsible for the delivery of the generated newsletters via email.
+* [![Python][Python-shield]][Python-url] - Used to write the code for the Azure Functions.
+* [![Azure Functions][AzureFunctions-shield]][AzureFunctions-url] - Used to host the application logic and trigger the newsletter generation process on a monthly basis.
+*[![Google Calendar API][GoogleCalendarAPI-shield]][GoogleCalendarAPI-url] - Utilized to fetch events from the shared family calendar. This data forms the basis of the newsletter content.
+* [![OpenAI][OpenAI-shield]][OpenAI-url] - Employs the capabilities of OpenAI's GPT model to generate the email content based on the events fetched from the Google Calendar API.
+* [![SendGrid][SendGrid-shield]][SendGrid-url] - Responsible for the delivery of the generated newsletters via email.
 
 
 Each of these components plays a crucial role in the functioning of the application, contributing to its ability to automate the process of creating and sending personalized newsletters.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
