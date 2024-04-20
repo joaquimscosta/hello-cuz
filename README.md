@@ -49,36 +49,6 @@
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -92,10 +62,9 @@ This project was to create a fun and engaging way to keep my family and friends 
 
 * [![Python][Python-shield]][Python-url] - Used to write the code for the Azure Functions.
 * [![Azure Functions][AzureFunctions-shield]][AzureFunctions-url] - Used to host the application logic and trigger the newsletter generation process on a monthly basis.
-*[![Google Calendar API][GoogleCalendarAPI-shield]][GoogleCalendarAPI-url] - Utilized to fetch events from the shared family calendar. This data forms the basis of the newsletter content.
+* [![Google Calendar API][GoogleCalendarAPI-shield]][GoogleCalendarAPI-url] - Utilized to fetch events from the shared family calendar. This data forms the basis of the newsletter content.
 * [![OpenAI][OpenAI-shield]][OpenAI-url] - Employs the capabilities of OpenAI's GPT model to generate the email content based on the events fetched from the Google Calendar API.
 * [![SendGrid][SendGrid-shield]][SendGrid-url] - Responsible for the delivery of the generated newsletters via email.
-
 
 Each of these components plays a crucial role in the functioning of the application, contributing to its ability to automate the process of creating and sending personalized newsletters.
 
@@ -108,14 +77,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* Python 3.6 or later: Download Python
+* Python 3.6 or later: [Download Python][DownloadPython-url]
 * pip (Python package installer): pip is included as a default package in Python 3.4 and later versions.
 
 ### Installing Azure Functions Core Tools
 
 The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
 
-1. Install the [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python). You need version 3.x of the Tools for Python development.
+1. Install the [Azure Functions Core Tools][AzFuncCoreTools-url]. You need version 3.x of the Tools for Python development.
 2. Verify that the tools are installed correctly by running the following command in your terminal:
 
     ```sh
@@ -216,3 +185,6 @@ Project Link: [https://github.com/joaquimscosta/hello-cuz](https://github.com/jo
 [OpenAI-url]: https://www.openai.com/
 [SendGrid-shield]: https://img.shields.io/badge/SendGrid-3B5998?style=for-the-badge&logo=sendgrid&logoColor=white
 [SendGrid-url]: https://sendgrid.com/
+
+[DownloadPython-url]: (https://www.python.org/downloads/)
+[AzFuncCoreTools-url]: (https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python)
