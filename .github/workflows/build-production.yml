@@ -35,7 +35,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 'Login via Azure CLI'
-      uses: azure/login@v2
+      uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }} # set up AZURE_CREDENTIALS secrets in your repository
     
@@ -46,7 +46,7 @@ jobs:
         sudo mv ./bicep /usr/local/bin/bicep
         bicep --help
     - name: Deploy Bicep file
-      uses: azure/CLI@v1
+      uses: azure/CLI@v1.0.9
       with:
         azcliversion: latest
         inlineScript: |
