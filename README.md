@@ -32,7 +32,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-This project was to create a fun and engaging way to keep my family and friends updated on the events happening each month. By automating the process of generating and sending newsletters, I can ensure that everyone stays in touch.
+This goal of this project was to create a fun and engaging way to keep my family and friends updated on the events happening each month. By automating the process of generating and sending newsletters, I can ensure that everyone stays in touch.
 
 ### Built With
 
