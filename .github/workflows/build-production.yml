@@ -50,7 +50,7 @@ jobs:
       with:
         inlineScript: |
           az deployment group create --name Deployment-$(date +"%Y%m%dat%H.%M") \
-            --resource-group ${{ vars.AZURE_RESOURCE_GROUP }} \
+            --resource-group hellocuz-rg \
             --parameters prefix=${{ env.AZURE_FUNCTIONAPP_NAME }} \
             --template-file ./infra/main.bicep
 
