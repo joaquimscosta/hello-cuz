@@ -5,17 +5,17 @@ param location string = resourceGroup().location
 @description('Application Insights Location.')
 param appInsightsLocation string = location
 
-@description('Programming language used in the function app.')
+@description('The worker runtime used in the function app.')
 var runtime = 'python'
-@description('Python version used in the function app.')
-var runtimeVersion = '3.10'
+@description('Runtime stack version used in the function app. for example: \'python:3.10\'')
+var linuxFxVersion = 'python|3.10'
 var hostingPlanName = '${prefix}-plan'
 var functionAppName = '${prefix}-func'
 var appInsightsName = '${functionAppName}-appinsights'
 var storageAccountName = take('${prefix}${uniqueString(resourceGroup().id)}storage', 24)
 var storageAccountConnectionString = 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};AccountKey=${storageAccount.listKeys().keys[0].value};EndpointSuffix=${environment().suffixes.storage}'
 
-resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccountName
   location: location
   kind: 'StorageV2'
@@ -28,17 +28,20 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   }
 }
 
-resource hostingPlan 'Microsoft.Web/serverfarms@2023-01-01' = {
+resource hostingPlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: hostingPlanName
   location: location
   kind: 'linux'
+  properties: {
+    reserved: true
+  }
   sku: {
     name: 'Y1'
     tier: 'Dynamic'
   }
 }
 
-resource functionApp 'Microsoft.Web/sites@2023-01-01' = {
+resource functionApp 'Microsoft.Web/sites@2022-09-01' = {
   name: functionAppName
   location: location
   kind: 'functionapp,linux'
@@ -49,6 +52,7 @@ resource functionApp 'Microsoft.Web/sites@2023-01-01' = {
     serverFarmId: hostingPlan.id
     httpsOnly: true
     siteConfig: {
+      linuxFxVersion: linuxFxVersion
       appSettings: [
         {
           name: 'FUNCTIONS_WORKER_RUNTIME'
@@ -57,10 +61,6 @@ resource functionApp 'Microsoft.Web/sites@2023-01-01' = {
         {
           name: 'FUNCTIONS_EXTENSION_VERSION'
           value: '~4'
-        }
-        {
-          name: 'WEBSITE_PYTHON_VERSION'
-          value: runtimeVersion
         }
         {
           name: 'AzureWebJobsStorage'
