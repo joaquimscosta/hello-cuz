@@ -6,7 +6,7 @@ LOCATION="eastus"
 # FUNCTION_APP_NAME="hellocuzfunctionapp"
 
 az group create --name $RESOURCE_GROUP --location $LOCATION
-az deployment group create --resource-group $RESOURCE_GROUP --template-file infra/main.bicep
+# az deployment group create --resource-group $RESOURCE_GROUP --template-file infra/main.bicep
 
 # az storage account create \
 # --name $STORAGE_ACCOUNT_NAME \

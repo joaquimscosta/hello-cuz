@@ -7,7 +7,7 @@ param appInsightsLocation string = location
 
 @description('The worker runtime used in the function app.')
 var runtime = 'python'
-@description('Runtime stack version used in the function app. for example: \'python:3.10\'')
+@description('Runtime stack version used in the function app. for example: \'python|3.10\'')
 var linuxFxVersion = 'python|3.10'
 var hostingPlanName = '${prefix}-plan'
 var functionAppName = '${prefix}-func'
