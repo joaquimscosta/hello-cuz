@@ -1,6 +1,6 @@
 ## Create a workflow identity for the GitHub repository
 
-## Register application with Microsoft Entra ID
+### Register application with Microsoft Entra ID
 
 ```sh
 githubOrganizationName='joaquimscosta'

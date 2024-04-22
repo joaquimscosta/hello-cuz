@@ -51,7 +51,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* Python 3.6 or later: [Download Python][DownloadPython-url]
+* Python 3.10 or later: [Download Python][DownloadPython-url]
 * pip (Python package installer): pip is included as a default package in Python 3.4 and later versions.
 
 ### Installing Azure Functions Core Tools
@@ -88,7 +88,6 @@ The Azure Functions Core Tools provide a local development experience for creati
 4. Set up the required environment variables. You will need to replace 'your_value' with the actual values for your application.
 
     ```sh
-    export GOOGLE_CALENDAR_API_KEY='your_value'
     export GOOGLE_CALENDAR_ID='your_value'
     export OPENAI_API_KEY='your_value'
     export SENDGRID_API_KEY='your_value'
