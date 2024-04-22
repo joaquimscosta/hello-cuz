@@ -47,8 +47,6 @@ __blobstorage__
 __queuestorage__
 __azurite_db*__.json
 
-# Azure Functions local settings file
-.funcignore
 
 # Security
 service-account-file.json
