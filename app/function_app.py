@@ -87,7 +87,7 @@ def create_prompt(events):
     Have each event contained in a bullet point, add fun emoji. 
     The email should start with 'Hey Family', and the sender is 'Rodrigues Cousins'. 
     End the email with an motivational quote. 
-    The email content should be in HTML and the prompt response should be returned as JSON including 'subject' and 'content'.
+    The email content should be in HTML and the prompt response should be returned as valid JSON including properties, 'subject' and 'content'.
     Here are the list of events happening this month:\n"""
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
