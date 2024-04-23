@@ -14,7 +14,7 @@ var functionAppName = '${prefix}-func'
 var appInsightsName = '${functionAppName}-appinsights'
 var storageAccountName = take('${prefix}${uniqueString(resourceGroup().id)}storage', 24)
 var storageAccountConnectionString = 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};AccountKey=${storageAccount.listKeys().keys[0].value};EndpointSuffix=${environment().suffixes.storage}'
-
+var websiteContentShare = toLower('${functionAppName}${uniqueString(resourceGroup().id)}')
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccountName
   location: location
@@ -69,6 +69,10 @@ resource functionApp 'Microsoft.Web/sites@2022-09-01' = {
         {
           name: 'WEBSITE_CONTENTAZUREFILECONNECTIONSTRING'
           value: storageAccountConnectionString
+        }
+        {
+          name: 'WEBSITE_CONTENTSHARE'
+          value: websiteContentShare
         }
         {
           name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
